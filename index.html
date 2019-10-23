@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+
+		<style>
+			a:hover {
+				font-weight: bold;
+				color: blue;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			REDIRECT UYGULAMASI 1.0
+		</h1>
+
+		<ol id="ol" start="0">
+			<li>
+				<a>Youtube intro to js part 1</a>
+			</li>
+			<li>
+				<a>Youtube intro to js part 2</a>
+			</li>
+			<li>
+				<a>JS Whatsapp davet linki</a>
+			</li>
+			<li>
+				<a>JS Dersi Reposu</a>
+			</li>
+			<li>
+				<a>JS Alıştırmaları</a>
+			</li>
+			<li>
+				<a>Eloquent Javascript Kitap</a>
+			</li>
+			<li>
+				<a>P5.JS Intro Kitap</a>
+			</li>
+			<li>
+				<a>JS Dersi Hafta 2 Pzt Zip</a>
+			</li>
+			<li>
+				<a>JS Dersi Hafta 2 Sali Zip</a>
+			</li>
+			<li>
+				<a> Visual Studio Code Download Sayfasi</a>
+			</li>
+			<li>
+				<a> Online JS Editoru</a>
+			</li>
+		</ol>
+
+
+
+
+		<script>
+
+			let links = [
+				'https://www.youtube.com/watch?v=DpgZstT1ft8',
+				'https://www.youtube.com/watch?v=0fE9Lu5WDRk',
+				'https://chat.whatsapp.com/ItOl00brnPFCuHggKfLVJC',
+				'https://github.com/DenizBasgoren/ITU-ACM-19-20-Introduction-to-Programming-with-Javascript-Course/',
+				'https://denizbasgoren.github.io/ITU-ACM-19-20-Introduction-to-Programming-with-Javascript-Course/js/',
+				'https://eloquentjavascript.net/index.html',
+				'http://93.174.95.29/main/1455000/45dbc46659c6db3950b2ef55c50f868c/%28Make%29%20Lauren%20McCarthy%2C%20Casey%20Reas%2C%20Ben%20Fry%20-%20Getting%20Started%20with%20p5.js_%20Making%20Interactive%20Graphics%20in%20JavaScript%20and%20Processing-Maker%20Media%2C%20Inc%20%282015%29.pdf',
+				'https://drive.google.com/open?id=1vI1OrqQckuzq8qtbMPXn7tdf0hMNyLYS',
+				'https://drive.google.com/open?id=1rcfH36Fj_npCbIr7iMCn037MDfOmgUNb',
+				'https://code.visualstudio.com/download',
+				'https://jsbin.com'
+			]
+
+			let ol = document.getElementById('ol')
+			for (let i = 0; i< ol.children.length; i++) {
+				// ol.children[i].children[0].onclick = () => {
+				// 	window.location = links[i]
+				// }
+
+				ol.children[i].children[0].setAttribute('href', links[i] )
+			}
+
+			if ( window.location.hash) {
+				window.location = links[ +window.location.hash.substring(1, window.location.hash.length)]
+			}
+
+		</script>
+	</body>
+</html>
+
